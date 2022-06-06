@@ -11,7 +11,7 @@ export default {
   },
   created() {
     console.log('Go!!!');
-    console.log('Go!!!');
+    console.log(_.isString('Hello'));
   },
 }
 </script>

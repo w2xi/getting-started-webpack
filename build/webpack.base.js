@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const chalk = require('chalk')
+const webpack = require("webpack");
 
 module.exports = {
   entry: {
@@ -61,6 +62,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      _: "underscore",
+    }),
     new HtmlWebpackPlugin({
       // 模板文件
       template: "./public/index.html",
