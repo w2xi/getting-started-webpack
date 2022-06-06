@@ -2,6 +2,8 @@
 
 ## 参考
 
+[webpack 文档](https://webpack.js.org/concepts/)
+
 [「基础搭建」从零开始，基于 Webpack5 搭建一个 Vue-Cli](https://segmentfault.com/a/1190000041548562)
 
 [带你深度解锁Webpack系列(基础篇)](https://juejin.cn/post/6844904079219490830)
