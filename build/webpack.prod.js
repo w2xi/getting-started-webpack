@@ -1,6 +1,8 @@
 const { merge } = require("webpack-merge");
 const base = require("./webpack.base.js");
 const webpack = require("webpack");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
 
 module.exports = merge(base, {
   mode: "production",
@@ -15,5 +17,16 @@ module.exports = merge(base, {
         },
       },
     }),
-  ],
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../public'),
+          to: path.resolve(__dirname, '../dist'),
+          globOptions: {
+            ignore: ['**/index.html']
+          }
+        }
+      ]
+    })
+  ]
 });
