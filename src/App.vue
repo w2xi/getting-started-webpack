@@ -18,6 +18,7 @@ export default {
     }
   },
   created() {
+    console.log(process.env);
     console.log('Go!!!');
     console.log(_.isString('Hello'));
   },
